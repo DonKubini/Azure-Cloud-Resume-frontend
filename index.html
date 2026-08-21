@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page {
+    size: A4;
+    margin: 8.5mm 11.5mm;
+    background-color: #ffffff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.28;
+    font-size: 8.6pt;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0284c7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header {
+    border-bottom: 2px solid #0284c7;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.header-name {
+    font-size: 17.5pt;
+    font-weight: 800;
+    color: #0f172a;
+    letter-spacing: -0.4px;
+    margin: 0 0 1px 0;
+}
+
+.header-title {
+    font-size: 10pt;
+    font-weight: 600;
+    color: #0284c7;
+    margin: 0 0 3px 0;
+}
+
+.contact-bar {
+    display: table;
+    width: 100%;
+    font-size: 8pt;
+    color: #475569;
+}
+
+.contact-row {
+    display: table-row;
+}
+
+.contact-cell {
+    display: table-cell;
+    padding-right: 8px;
+    white-space: nowrap;
+}
+
+.section {
+    margin-bottom: 6px;
+}
+
+.section-title {
+    font-size: 9.3pt;
+    font-weight: 700;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1.5px;
+    margin: 0 0 4px 0;
+    page-break-after: avoid;
+}
+
+.summary-text {
+    margin: 0;
+    color: #334155;
+    text-align: justify;
+    font-size: 8.3pt;
+    line-height: 1.28;
+}
+
+/* Skills Table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table td {
+    padding: 1.2px 0;
+    vertical-align: top;
+    font-size: 8.2pt;
+}
+
+.skill-category {
+    font-weight: 700;
+    color: #0f172a;
+    width: 25%;
+    padding-right: 6px;
+}
+
+.skill-list {
+    color: #334155;
+    width: 75%;
+}
+
+/* Entry blocks */
+.entry {
+    margin-bottom: 4.5px;
+    page-break-inside: avoid;
+}
+
+.entry-header {
+    display: table;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+.entry-title {
+    display: table-cell;
+    font-size: 8.8pt;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.entry-date {
+    display: table-cell;
+    text-align: right;
+    font-size: 7.8pt;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.entry-subtitle {
+    font-size: 8.2pt;
+    font-weight: 600;
+    color: #0369a1;
+    margin-bottom: 1.5px;
+}
+
+.tech-tag {
+    font-size: 7.2pt;
+    color: #0369a1;
+    background-color: #f0f9ff;
+    border: 1px solid #bae6fd;
+    padding: 0.5px 4px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 1.5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.project-link {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #0284c7;
+    margin-left: 4px;
+}
+
+ul.bullet-list {
+    margin: 1px 0 0 0;
+    padding-left: 13px;
+}
+
+ul.bullet-list li {
+    margin-bottom: 1px;
+    color: #334155;
+    font-size: 8.1pt;
+    line-height: 1.25;
+}
+
+ul.bullet-list li strong {
+    color: #0f172a;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-name">Jakub Šišma</div>
+    <div class="header-title">Junior / Associate Cloud & DevOps Engineer | Data & Cloud Automation</div>
+    <div class="contact-bar">
+        <div class="contact-row">
+            <div class="contact-cell">📍 Czech Republic</div>
+            <div class="contact-cell">📧 <a href="mailto:jakub.sisma917@gmail.com">jakub.sisma917@gmail.com</a></div>
+            <div class="contact-cell">📱 +420 739 245 029</div>
+            <div class="contact-cell">🔗 <a href="https://linkedin.com/in/jakub-šišma-7b31871b5/">linkedin.com/in/jakub-šišma/</a></div>
+            <div class="contact-cell">💻 <a href="https://github.com/DonKubini">github.com/DonKubini</a></div>
+            <!-- <div class="contact-cell">🌐 <a href="https://jakub-sisma.dev">jakub-sisma.dev</a></div> -->
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Professional Summary</div>
+    <p class="summary-text">
+        Cloud & DevOps engineer combining a quantitative analytics degree from <strong>NHH (Norway)</strong> with hands-on corporate experience at <strong>Zebra Technologies</strong>. Focused on cloud automation and DataOps: designing scheduled batch pipelines in <strong>Microsoft Azure</strong>, provisioning infrastructure via <strong>Terraform (IaC)</strong>, and containerizing Python workflows with <strong>Docker</strong> and <strong>GitHub Actions CI/CD</strong>. Incoming computer science student at <strong>FIT CTU</strong><!-- actively implementing the <strong>Cloud Resume Challenge</strong> -->.
+    </p>
+</div>
+
+<div class="section">
+    <div class="section-title">Technical Skills</div>
+    <table class="skills-table">
+        <tr>
+            <td class="skill-category">Cloud & Platforms</td>
+            <td class="skill-list">Microsoft Azure (Container App Jobs, ACR, Azure SQL, Managed Identity, Azure Container Registry)</td>
+        </tr>
+        <tr>
+            <td class="skill-category">IaC & CI/CD</td>
+            <td class="skill-list">Terraform (Modules, state management), GitHub Actions (YAML workflows, automated testing & deployment)</td>
+        </tr>
+        <tr>
+            <td class="skill-category">Containers & OS</td>
+            <td class="skill-list">Docker (Dockerfiles, containerization), Git & GitHub (Version control), Linux / Bash basics</td>
+        </tr>
+        <tr>
+            <td class="skill-category">Programming & Data</td>
+            <td class="skill-list">Python (pandas, scikit-learn, scipy, unittest), SQL (Google BigQuery, Azure SQL), R</td>
+        </tr>
+        <tr>
+            <td class="skill-category">Visualization & BI</td>
+            <td class="skill-list">Dash, Plotly (Interactive web dashboards), Power BI, Advanced Excel</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <div class="section-title">Technical Projects & Portfolio</div>
+    
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">
+                Automated Cloud Data Pipeline (Oslo Børs)
+                <a class="project-link" href="https://github.com/donkubini/oslo-bors-pipeline">[GitHub Repo ↗]</a>
+            </div>
+            <div class="entry-date">2026</div>
+        </div>
+        <div class="tech-tag">Azure Container App Jobs · Azure SQL · ACR · Terraform · Docker · GitHub Actions · Python</div>
+        <ul class="bullet-list">
+            <li><strong>Batch Processing:</strong> Engineered an automated cloud pipeline in <strong>Azure</strong> that runs monthly batch jobs to extract Norwegian stock market data, perform data transformation (ETL), and compute predictive return models.</li>
+            <li><strong>Infrastructure as Code:</strong> Provisioned all cloud resources (Container Apps, SQL Database, ACR, Managed Identity) declaratively using <strong>Terraform</strong>.</li>
+            <li><strong>CI/CD & Testing:</strong> Built a <strong>GitHub Actions</strong> pipeline to run automated <code>unittest</code> suites, build Docker containers, push images to ACR, and trigger scheduled execution.</li>
+        </ul>
+    </div>
+<!--
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">
+                Cloud Resume Challenge (Azure & DevOps)
+                <a class="project-link" href="https://github.com/donkubini/azure-resume">[Live Demo & Code ↗]</a>
+            </div>
+            <div class="entry-date">Portfolio Project</div>
+        </div>
+        <div class="tech-tag">Azure Functions (Serverless Python) · Cosmos DB · Blob Storage / CDN · Terraform · GitHub Actions</div>
+        <ul class="bullet-list">
+            <li><strong>Serverless & GitOps:</strong> Built a serverless portfolio website backed by Azure Functions and Cosmos DB for live visit counts, configured custom DNS with HTTPS, and automated all deployments via Terraform and GitHub Actions.</li>
+        </ul>
+    </div>
+-->
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">
+                Master's Thesis: Quantitative Forecasting & Portfolio Optimization
+                <a class="project-link" href="https://github.com/donkubini/Man-vs.-Machine-on-the-Oslo-B-rs">[GitHub Repo ↗]</a>
+            </div>
+            <div class="entry-date">2025 – 2026</div>
+        </div>
+        <div class="tech-tag">Python · pandas · numpy · scikit-learn · Econometric Time Series · Quantitative Finance</div>
+        <ul class="bullet-list">
+            <li>Developed quantitative machine learning models in Python to predict asset returns on the Oslo Stock Exchange, serving as the core algorithmic base for subsequent cloud containerization.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Work Experience</div>
+    
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">Zebra Technologies</div>
+            <div class="entry-date">Oct 2023 – Jun 2026</div>
+        </div>
+        <div class="entry-subtitle">Data Scientist / Analyst (Secondment) &bull; <em>May 2025 – Jun 2026</em></div>
+        <ul class="bullet-list">
+            <li>Queried and processed enterprise datasets in <strong>Google BigQuery</strong> using SQL.</li>
+            <li>Developed interactive operational dashboards using <strong>Power BI</strong> to support business reporting.</li>
+        </ul>
+        <div class="entry-subtitle" style="margin-top: 2px;">Accounts Payable Specialist &bull; <em>Oct 2023 – Jun 2026</em></div>
+        <ul class="bullet-list">
+            <li>Indexing, processing and maintaining invoices and other accounts payable documents.</li>
+        </ul>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">ČSOB Stavební spořitelna</div>
+            <div class="entry-date">Feb 2023 – Oct 2023</div>
+        </div>
+        <div class="entry-subtitle">Sales Representative</div>
+        <ul class="bullet-list">
+            <li>Managed client portfolios, provided consultative sales of financial products, and strengthened client relationships.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Education</div>
+    
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">Czech Technical University in Prague (FIT ČVUT)</div>
+            <div class="entry-date">Incoming Fall 2026</div>
+        </div>
+        <div class="entry-subtitle">Bachelor of Science (Bc.) in Informatics / Computer Science (Combined Study)</div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">NHH Norwegian School of Economics (Bergen, Norway)</div>
+            <div class="entry-date">Aug 2024 – Jun 2026</div>
+        </div>
+        <div class="entry-subtitle">MSc in Economics and Business Administration | Major: Business Analytics, Minor: Finance</div>
+    </div>
+
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-title">Masaryk University (ESF MUNI)</div>
+            <div class="entry-date">Sep 2020 – Jun 2024</div>
+        </div>
+        <div class="entry-subtitle">Bachelor's Degree (Bc.) in Finance</div>
+        <div style="font-size: 7.7pt; color: #475569; margin-top: 1px;">
+            &bull; <strong>Academic Exchange Programs:</strong> IÉSEG School of Management (France) &bull; University of Victoria (UVic, Canada)
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-title">Certifications & Training</div>
+    <ul class="bullet-list">
+        <li><strong>Completed:</strong> IBM Data Science Professional Certificate (Coursera, May 2025) &bull; Financial Analysis with Python (Robot_Dreams, Dec 2024)</li>
+        <li><strong>In Progress:</strong> GOPAS: Azure – Cloud Deployment & Administration &bull; Target: Microsoft Certified Azure Administrator (AZ-104)</li>
+    </ul>
+</div>
+
+</body>
+</html>

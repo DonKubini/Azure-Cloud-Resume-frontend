@@ -9,3 +9,11 @@ Thumbs.db
 
 # Node modules (just in case you add frontend build tools later)
 node_modules/
+
+# Terraform files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+*.tfvars
+*.tfvars.json

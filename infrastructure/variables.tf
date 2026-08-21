@@ -15,18 +15,3 @@ variable "storage_account_name" {
   type        = string
   default     = "jscloudresumeacct2026" 
 }
-
-variable "cdn_profile_name" {
-  type    = string
-  default = "jakub-resume-cdn"
-}
-
-variable "cdn_endpoint_name" {
-  type    = string
-  default = "jscloudresumeendpoint2026" 
-}
-
-variable "custom_domain_name" {
-  type    = string
-  default = "www.jakub-sisma.dev" 
-}

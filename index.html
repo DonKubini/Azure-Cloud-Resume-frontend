@@ -199,6 +199,7 @@ ul.bullet-list li strong {
             <div class="contact-cell">📱 +420 739 245 029</div>
             <div class="contact-cell">🔗 <a href="https://linkedin.com/in/jakub-šišma-7b31871b5/">linkedin.com/in/jakub-šišma/</a></div>
             <div class="contact-cell">💻 <a href="https://github.com/DonKubini">github.com/DonKubini</a></div>
+            <div class="contact-cell">👀 Profile Views: <strong id="visitor-count">Loading...</strong></div>
             <!-- <div class="contact-cell">🌐 <a href="https://jakub-sisma.dev">jakub-sisma.dev</a></div> -->
         </div>
     </div>
@@ -354,6 +355,29 @@ ul.bullet-list li strong {
         <li><strong>In Progress:</strong> GOPAS: Azure – Cloud Deployment & Administration &bull; Target: Microsoft Certified Azure Administrator (AZ-104)</li>
     </ul>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // The URL of your deployed Azure Function
+        const apiUrl = "https://jscloudresumeapp2026.azurewebsites.net/api/GetResumeCounter";
+        const counterElement = document.getElementById("visitor-count");
+
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(count => {
+                counterElement.innerText = count;
+            })
+            .catch(error => {
+                console.error("Error fetching visitor count:", error);
+                counterElement.innerText = "Unavailable";
+            });
+    });
+</script>
 
 </body>
 </html>

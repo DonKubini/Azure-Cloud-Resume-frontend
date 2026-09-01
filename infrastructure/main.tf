@@ -35,3 +35,28 @@ resource "azurerm_storage_blob" "index_html" {
   source                = "../index.html"
   content_md5           = filemd5("../index.html")
 }
+
+data "azurerm_client_config" "current" {}
+
+# 1. Create a Managed Identity specifically for the Frontend Actions
+resource "azurerm_user_assigned_identity" "github_frontend_identity" {
+  name                = "github-actions-identity-frontend"
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+}
+
+# 2. Give it permission to upload files into the Storage Account blobs
+resource "azurerm_role_assignment" "github_blob_contributor" {
+  scope                = azurerm_storage_account.sa.id
+  role_definition_name = "Storage Blob Data Contributor"
+  principal_id         = azurerm_user_assigned_identity.github_frontend_identity.principal_id
+}
+
+# 3. Create the OIDC Federation for the Frontend repo
+resource "azurerm_federated_identity_credential" "github_oidc_frontend" {
+  name                = "github-actions-federation-frontend"
+  audience            = ["api://AzureADTokenExchange"]
+  issuer              = "https://token.actions.githubusercontent.com"
+  user_assigned_identity_id = azurerm_user_assigned_identity.github_frontend_identity.id
+  subject             = "repo:${var.github_repository}:ref:refs/heads/main"
+}

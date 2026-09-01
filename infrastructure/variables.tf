@@ -15,3 +15,9 @@ variable "storage_account_name" {
   type        = string
   default     = "jscloudresumeacct2026" 
 }
+
+variable "github_repository" {
+  description = "The GitHub repository (e.g., your-username/azure-resume-frontend)"
+  type        = string
+  default     = "DonKubini@128520245/Azure-Cloud-Resume-backend@1341805137"
+}

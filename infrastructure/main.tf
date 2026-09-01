@@ -20,6 +20,10 @@ resource "azurerm_storage_account_static_website" "static_site" {
   index_document     = "index.html"
 }
 
+# These blocks manage the upload of the index.html file to the $web container in the storage account.
+# This is commented out because the upload will be handled by GitHub Actions using the Managed Identity and OIDC Federation.
+# Uncomment these blocks if you want to upload the index.html file directly from Terraform instead of using GitHub Actions.
+/*
 data "azurerm_storage_container" "web" {
   name                = "$web"
   storage_account_id  = azurerm_storage_account.sa.id
@@ -35,6 +39,7 @@ resource "azurerm_storage_blob" "index_html" {
   source                = "../index.html"
   content_md5           = filemd5("../index.html")
 }
+*/
 
 data "azurerm_client_config" "current" {}
 

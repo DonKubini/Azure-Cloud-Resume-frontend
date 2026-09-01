@@ -17,7 +17,7 @@ variable "storage_account_name" {
 }
 
 variable "github_repository" {
-  description = "The GitHub repository (e.g., your-username/azure-resume-frontend)"
+  description = "The GitHub repository in the format 'owner/repo' for which to create the OIDC federation"
   type        = string
-  default     = "DonKubini@128520245/Azure-Cloud-Resume-backend@1341805137"
+  default     = "DonKubini@128520245/Azure-Cloud-Resume-frontend@1341549167"
 }

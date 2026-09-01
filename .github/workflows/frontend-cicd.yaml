@@ -31,7 +31,6 @@ jobs:
       - name: Upload to Blob Storage
         uses: azure/CLI@v2
         with:
-          # Replace 'jscloudresumeacct2026' with your actual frontend storage account name
           inlineScript: |
             az storage blob upload-batch \
               --account-name jscloudresumeacct2026 \

@@ -41,6 +41,7 @@ resource "azurerm_storage_blob" "index_html" {
 }
 */
 
+## Fetch your current Azure tenant and subscription IDs automatically
 data "azurerm_client_config" "current" {}
 
 # 1. Create a Managed Identity specifically for the Frontend Actions

@@ -37,4 +37,5 @@ jobs:
               --auth-mode login \
               --destination '$web' \
               --source . \
-              --pattern "index.html"
+              --pattern "index.html" \
+              --overwrite
